@@ -85,6 +85,9 @@ ctaButton.append(siteContent.cta["button"]);
 
 const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent.cta['img-src']);
+ctaImage.addEventListener('click', (image) => {
+  ctaImage.setAttribute('src', 'https://i.pinimg.com/originals/63/ea/30/63ea30247778e1899f48503e34474192.jpg');
+})
 
 //selectors for top content h4 and p tags using same method as for nav to select by index
 
@@ -123,4 +126,10 @@ contactP[2].append(siteContent.contact['email'])
 
 const footer = document.querySelector('footer p');
 footer.append(siteContent.footer['copyright']);
+footer.style.backgroundColor = 'green';
+
+//added some background color too nav container
+
+const headerQuery = document.querySelector('header');
+headerQuery.style.backgroundColor = 'yellow';
 
